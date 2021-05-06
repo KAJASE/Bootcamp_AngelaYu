@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+
+<p><%= homeContent %></p>
+
+<% pepis.forEach(function(post){ %>
+ <h1><%= post.title %></h1>
+ <p><%= post.content.substring(0, 100) + " ..." %></p>
+ <a href="/post/<%= post.title %>">Read More</a>
+<% }); %>
+
+<%- include("partials/footer"); -%>
